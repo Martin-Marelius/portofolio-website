@@ -25,7 +25,7 @@ export const Display = () => {
     const card = new ProjectsDisplay()
 
     return (
-        <div className="flex flex-col bg-white w-52 max-h-72 h-72 rounded-2xl">
+        <div className="flex flex-col bg-white w-52 max-h-72 h-72 rounded-2xl transform transition-all hover:scale-105 shadow-xl">
             <div>
                 <Image src={mypic}
                     layout="intrinsic"

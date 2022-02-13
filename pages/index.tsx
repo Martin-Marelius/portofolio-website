@@ -3,7 +3,7 @@ import React from "react";
 import { Footer, Header, Navbar, Display } from '../components';
 
 const IndexPage = () => (
-  <div className='relative bg-gradient-to-br from-rose-400 to-orange-300'>
+  <div className='bg-gradient-to-r from-sky-400 to-indigo-900 min-h-screen'>
 
     <div>
       <Navbar />
