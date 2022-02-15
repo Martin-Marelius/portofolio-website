@@ -23,6 +23,9 @@ module.exports = {
 				purple: colors.purple,
 				fuchsia: colors.fuchsia,
 				rose: colors.rose,
+				primary: "#0f172a",
+				secondary: "#475569",
+				link: "#0284c7",
 			}
 		},
 	},
