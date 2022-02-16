@@ -1,13 +1,23 @@
+import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className='flex flex-row relative place-content-end gap-10 mr-20 pt-5'>
+        <ul className='flex flex-row relative place-content-end gap-10 mr-20 pt-5'>
 
-            <a className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>Portfolio</a>
-            <a className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>About</a>
-            <a className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>Contact</a>
+            <li className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>
+                <Link href="/portofolio">Portfolio</Link>
+            </li>
+            <li className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>
+                <Link href="/blog">Blog</Link>
+            </li>
+            <li className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>
+                <Link href="/about">About</Link>
+            </li>
+            <li className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>
+                <Link href="/contact">Contact</Link>
+            </li>
 
-        </div>
+        </ul>
     );
 
 }
