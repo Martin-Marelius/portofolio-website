@@ -24,8 +24,11 @@ module.exports = {
 				fuchsia: colors.fuchsia,
 				rose: colors.rose,
 				primary: "#0f172a",
-				secondary: "#475569",
+				primary2: "#1e293b",
+				secondary: "#334155",
 				link: "#0284c7",
+				darkText: "#475569",
+				lightText: "#64748b",
 			}
 		},
 	},

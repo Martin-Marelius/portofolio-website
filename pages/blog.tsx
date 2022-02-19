@@ -1,8 +1,11 @@
+import { BlogArticle, Footer, Navbar } from "../components"
 
 const BlogPage = () => {
     return (
-        <div className="text-center w-screen h-screen">
-            <p>Welcome to my BlogPage</p>
+        <div className="relative min-h-screen ">
+            <Navbar />
+            <BlogArticle />
+            <Footer />
         </div>
 
     )

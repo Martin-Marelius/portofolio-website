@@ -6,15 +6,12 @@ import Modal from 'react-modal';
 const IndexPage = () => {
   return (
 
-    <div className='bg-primary relative min-h-screen'>
+    <div className='relative min-h-screen'>
 
       <div>
         <Navbar />
         <Header />
       </div>
-
-      <Display />
-
       <Footer />
     </div>
   )
