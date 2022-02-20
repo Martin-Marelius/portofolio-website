@@ -1,5 +1,5 @@
 export { default as Footer } from './footer/Footer'
 export { default as Header } from './header/Header'
 export { default as Navbar } from './navbar/Navbar'
-export { default as BlogArticle } from './blog/Blogarticle'
+export { default as BlogArticle } from './blog/BlogArticle'
 export { ProjectsDisplay, Display } from './projects/ProjectsDisplay'
