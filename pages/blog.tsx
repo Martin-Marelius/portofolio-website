@@ -5,7 +5,9 @@ const BlogPage = () => {
     return (
         <div className="relative min-h-screen ">
             <Navbar />
-            {blog.map((data) => <BlogArticle  data={data}/>)}
+            <div className="mx-6 sm:mx-12 md:mx-24 lg:mx-48 xl:mx-72 2xl:mx-96 ">
+                {blog.map((data) => <BlogArticle data={data} />)}
+            </div>
             <Footer />
         </div>
 

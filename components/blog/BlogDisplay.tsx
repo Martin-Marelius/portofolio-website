@@ -1,11 +1,9 @@
-import Keyword from "../utils/Keyword";
 
 /**
- * @props title: string, paragraph: string, keyword: string
- * @returns blog section tsx
+ * @returns a display of the blog and headlines for use on the homepage
  */
 
-const BlogArticle = (props) => {
+ const BlogDisplay = (props) => {
     return (
         <div className="text-white mt-24">
             <h1 className="font-bold text-2xl text-left">
@@ -18,13 +16,8 @@ const BlogArticle = (props) => {
                 {props.data.paragraph}
             </p>
 
-            <div className="flex flex-row gap-4 mt-2">
-                {props.data.keywords.map((keyword) => <Keyword keyword={keyword}/>)}
-            </div>
-
-
         </div>
     );
 }
 
-export default BlogArticle
+export default BlogDisplay
