@@ -61,14 +61,8 @@ let b3: BlogType = {
     keywords: ["TypeScript", "CSS", "React"]
 }
 
-let projects: Array<ProjectType>;
-projects.push(p1); projects.push(p2); projects.push(p3);
+let projects: ProjectType[] = [p1, p2, p3];
 
-let blog: Array<BlogType>;
-blog.push(b1); blog.push(b2); blog.push(b3);
-
-
-
-
+let blog: BlogType[] = [b1, b2, b3];
 
 export { blog, projects }

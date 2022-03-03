@@ -25,7 +25,7 @@ export class ProjectsDisplay implements ProjectDisplay {
 /**
  * 
  * @param props.data in the format of (string | number)[]
- * @returns a display of languages in co.lors and percentages
+ * @returns a display of languages in colors and percentages
  */
 const Languages = (props) => {
     return (
