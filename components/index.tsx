@@ -6,4 +6,4 @@ export { default as BlogDisplay } from './blog/BlogDisplay'
 export { ProjectsDisplay, Display } from './projects/ProjectsDisplay'
 export { default as ContactDisplay } from './contact/ContactDisplay' 
 
-export {default as Keyword } from "./utils/Keyword"
+export { default as Keyword } from "./utils/Keyword"
