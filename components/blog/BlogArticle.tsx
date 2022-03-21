@@ -19,7 +19,7 @@ const BlogArticle = (props) => {
             </p>
 
             <div className="flex flex-row gap-4 mt-2">
-                {props.data.keywords.map((keyword) => <Keyword keyword={keyword}/>)}
+                {props.data.keywords.map((keyword:string) => <Keyword keyword={keyword}/>)}
             </div>
 
 
