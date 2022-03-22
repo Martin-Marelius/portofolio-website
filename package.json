@@ -8,10 +8,14 @@
   },
   "dependencies": {
     "@craco/craco": "^5.9.0",
+    "highlight.js": "^11.5.0",
     "next": "^12.1.0",
+    "prismjs": "^1.27.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-highlight": "^0.14.0",
+    "react-icons": "^4.3.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",
