@@ -37,6 +37,8 @@
  * 
  */
 
+import codeEmbedType from "./codeEmbedType";
+
 type articleType = {
 
     /**
@@ -63,7 +65,7 @@ type articleType = {
      * add if there is any inline code to be displayed in a pretty format.
      * code is not necessary, and is put in the order according to [number] in the article.
      */
-    code?: [number ,string][];
+    code?: [number ,codeEmbedType][];
 
     /**
      * date published, on the format of dd/mm/yyyy.
