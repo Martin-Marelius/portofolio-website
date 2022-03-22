@@ -39,7 +39,7 @@
 
 import codeEmbedType from "./codeEmbedType";
 
-type articleType = {
+type ArticleType = {
 
     /**
      * must contain mainTitle, also used for small display at homepage.
@@ -78,4 +78,4 @@ type articleType = {
     keywords: string[];
 }
 
-export default articleType
+export default ArticleType
