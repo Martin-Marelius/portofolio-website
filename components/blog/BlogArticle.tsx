@@ -14,12 +14,11 @@ import ArticleType from '../types/ArticleType';
  */
 
 const BlogArticle = (props) => {
-    const [article, setArticle] = useState<ArticleType>()
+    const [article, setArticle] = useState<ArticleType>(props.article)
 
     hljs.registerLanguage('lang', lua);
 
     useEffect(() => {
-        setArticle(props.article)
         hljs.initHighlighting();
     }, []);
 
