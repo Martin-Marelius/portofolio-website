@@ -1,7 +1,7 @@
-const MainImage = () => {
+const MainImage = (props) => {
     return (
         <div>
-
+            {props.mainImage}
         </div>
     );
 }

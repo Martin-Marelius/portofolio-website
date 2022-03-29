@@ -1,7 +1,7 @@
-const MainTitle = () => {
+const MainTitle = (props) => {
     return (
         <div>
-
+            {props.mainTitle}
         </div>
     );
 }

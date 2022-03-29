@@ -1,7 +1,7 @@
-const CreationDate = () => {
+const CreationDate = (props) => {
     return (
         <div>
-
+            {props.creationDate}
         </div>
     );
 }
