@@ -1,8 +1,8 @@
 const MainTitle = (props) => {
     return (
-        <div>
-            {props.mainTitle}
-        </div>
+        <h1 className="text-white font-bold text-4xl">
+            {props.title}
+        </h1>
     );
 }
 

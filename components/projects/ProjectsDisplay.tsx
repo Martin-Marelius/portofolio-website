@@ -1,6 +1,5 @@
 import ProjectDisplay from "../../interfaces/ProjectDisplay/ProjectDisplayInterface";
 import Image from 'next/image'
-import mypic from '../../asset/beatdetector.jpg'
 import Link from "next/link";
 
 export class ProjectsDisplay implements ProjectDisplay {
@@ -68,13 +67,7 @@ const Languages = (props) => {
 const Card = (props) => {
     return (
         <div className="flex flex-col bg-white w-52 max-h-72 h-72 rounded-2xl transform transition-all hover:scale-105 shadow-xl">
-            <div>
-                <Image src={mypic}
-                    layout="intrinsic"
-                    className="rounded-t-2xl"
-                />
-
-            </div>
+            
 
             <div className="mx-2 overflow-hidden">
                 <div className="flex flex-row place-content-between ">

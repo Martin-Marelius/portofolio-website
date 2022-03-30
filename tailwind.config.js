@@ -23,7 +23,7 @@ module.exports = {
 				purple: colors.purple,
 				fuchsia: colors.fuchsia,
 				rose: colors.rose,
-				primary: "#0f172a",
+				primary: "#f1f5f9",
 				primary2: "#1e293b",
 				secondary: "#334155",
 				link: "#0284c7",

@@ -5,19 +5,18 @@ import { Footer, Header, Navbar, Display } from '../components';
 
 const IndexPage = () => {
   return (
-    
+
 
     <div className='relative min-h-screen'>
       <Head>
-        <title>Portofolio</title>
-        <meta name="" content="" />
+        <title>Martin Marelius</title>
+        <meta name="My personal website" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <Navbar />
-        <Header />
-      </div>
+      <Navbar />
+      <Header />
+
       <Footer />
     </div>
   )
