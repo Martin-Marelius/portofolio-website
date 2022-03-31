@@ -12,14 +12,31 @@ import { at, github, instagram, linkedin, phone, position, twitter, user } from 
     return (
         <div className="flex flex-col min-h-1/2 md:flex-row gap-10 place-content-center place-items-center mt-10 bg-inherit">
 
-            <div className="flex flex-col gap-4">
+            <ContactForm />
+
+            <div id="line" className="w-px h-2/3 bg-primary2" />
+
+            <div className="flex flex-col gap-4 bg-inherit self-center relative -mt-12 md:mt-0">
+                <ContactInfo />
+                <LogoDisplay />
+
+            </div>
+
+        </div>
+
+    );
+
+}
+
+export const ContactForm = () => {
+    return (
+        <div className="flex flex-col gap-4">
 
                 <div className="flex flex-start">
                     <h1 className="text-white text-xl">
                         Get in contact!
                     </h1>
                 </div>
-
 
                 <div className="flex gap-2">
                     <label id="name">
@@ -42,19 +59,8 @@ import { at, github, instagram, linkedin, phone, position, twitter, user } from 
                     </label>
                 </div>
             </div>
-
-            <div id="line" className="w-px h-2/3 bg-primary2" />
-
-            <div className="flex flex-col gap-4 bg-inherit self-center relative -mt-12 md:mt-0">
-                <ContactInfo />
-                <LogoDisplay />
-
-            </div>
-
-        </div>
-
+        
     );
-
 }
 
 export const ContactInfo = () => {

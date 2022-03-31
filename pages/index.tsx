@@ -1,24 +1,36 @@
 import Link from 'next/link'
 import Head from 'next/head';
 import React, { useState } from "react";
-import { Footer, Header, Navbar, Display } from '../components';
+import { Footer, Header, Navbar, Display, ContactForm, ProjectsPreview, Introduction, BlogDisplay } from '../components';
+
+/**
+ * @returns jsx of the home page
+ */
 
 const IndexPage = () => {
   return (
 
 
-    <div className='relative min-h-screen'>
+    <>
       <Head>
         <title>Martin Marelius</title>
         <meta name="My personal website" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-      <Header />
 
-      <Footer />
-    </div>
+      <div className='flex flex-col'> 
+        <Navbar />
+        <Header />
+        <Introduction />
+        <ProjectsPreview />
+        <BlogDisplay />
+        <ContactForm />
+        <Footer />
+      </div>
+
+
+    </>
   )
 }
 

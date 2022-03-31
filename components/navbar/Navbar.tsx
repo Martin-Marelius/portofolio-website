@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className='fixed w-screen z-50 backdrop-blur bg-white/20'>
-            <ul className='flex flex-row-reverse gap-10 p-3 pr-6'>
+        <div className='relative z-50 backdrop-blur bg-black/20 overflow-hidden'>
+            <ul className='flex flex-row-reverse gap-10 overflow-hidden'>
 
                 <li className='font-bold font-mono text-lg text-white transform hover:scale-105 transition-all'>
                     <Link href="/contact">Contact</Link>
