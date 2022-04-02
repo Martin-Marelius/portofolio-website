@@ -7,11 +7,15 @@ import { ContactInfo } from "../contact/ContactDisplay";
 
 const Footer = () => {
     return (
-        <div className="flex flex-col w-screen h-1/3 bottom-0 bg-inherit place-content-start">
-            <div id="line" className="bg-primary2 h-px w-2/3 mt-6 place-self-center" />
+        <div className="flex flex-col bg-inherit shadow-inner shadow-black ">
+            
+            <div id="line" className="bg-primary2 h-px min-w-screen" />
 
-            <div className="flex flex-row place-content-between lg:mx-96 mx-48 mt-4 text-darkText font-sans">
-                    <ContactInfo/>
+            <div className="flex flex-row place-content-between place-self-center w-3/4 mt-10 mb-20 text-darkText font-sans">
+                    <div className="font-bold">Home</div>
+                    <div className="font-bold">Blog</div>
+                    <div className="font-bold">Portofolio</div>
+                    
             </div>
 
 

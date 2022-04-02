@@ -3,8 +3,10 @@ import homeImage from '../../asset/images/homescreen.jpg'
 
 const Header = () => {
     return (
-        <div className='flex-grow h-1/2 bg-sky-700'>
-            header
+        <div className='flex bg-sky-700'>
+            <div className='h-screen'>
+                header
+            </div>
         </div>
     );
 }

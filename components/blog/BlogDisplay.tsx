@@ -5,8 +5,10 @@
 
  const BlogDisplay = () => {
     return (
-        <div>
-            Blog display
+        <div className='flex bg-gray-700'>
+            <div className="w-screen h-screen">
+                blog
+            </div>
         </div>
     );
 }

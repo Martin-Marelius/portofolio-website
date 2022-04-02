@@ -14,7 +14,7 @@ import { at, github, instagram, linkedin, phone, position, twitter, user } from 
 
             <ContactForm />
 
-            <div id="line" className="w-px h-2/3 bg-primary2" />
+            <div id="line" className="w-px h-2/3 mt-10 bg-slate-300" />
 
             <div className="flex flex-col gap-4 bg-inherit self-center relative -mt-12 md:mt-0">
                 <ContactInfo />
@@ -68,19 +68,19 @@ export const ContactInfo = () => {
         <div className="flex flex-col gap-1 bg-inherit">
             <div className="flex flex-row gap-4 items-center">
                 <Image src={user} width={20} height={20} />
-                <h2 className="text-secondary text-md font-medium">Martin Marelius Johnsen</h2>
+                <h2 className="text-white text-md font-medium">Martin Marelius Johnsen</h2>
             </div>
             <div className="flex flex-row gap-4 items-center">
                 <Image src={position} width={20} height={20} />
-                <h2 className="text-secondary text-md font-medium">Norway</h2>
+                <h2 className="text-white text-md font-medium">Norway</h2>
             </div>
             <div className="flex flex-row gap-4 items-center">
                 <Image src={at} width={20} height={20} />
-                <h2 className="text-secondary text-md font-medium">johnsen.martin1@gmail.com</h2>
+                <h2 className="text-white text-md font-medium">johnsen.martin1@gmail.com</h2>
             </div>
             <div className="flex flex-row gap-4 items-center">
                 <Image src={phone} width={20} height={20} />
-                <h2 className="text-secondary text-md font-medium">+47 48143389</h2>
+                <h2 className="text-white text-md font-medium">+47 48143389</h2>
             </div>
 
         </div>
