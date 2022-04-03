@@ -11,7 +11,7 @@ const IndexPage = () => {
   return (
 
 
-    <div className='max-w-screen'>
+    <div className=''>
       <Head>
         <title>Martin Marelius</title>
         <meta name="My personal website" content="" />

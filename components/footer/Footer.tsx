@@ -17,8 +17,8 @@ const Footer = () => {
                     <div className="font-bold">Portofolio</div>
                     
             </div>
-            <div className="bg-slate-500 p-1 w-min-screen">
-                <h3 className="text-sm pl-72 text-slate-300">2022 @Martin Marelius</h3>
+            <div className="bg-slate-600 p-px w-min-screen">
+                <h3 className="text-sm mx-40 text-slate-400">2022 @Martin Marelius</h3>
             </div>
 
         </div>
