@@ -19,7 +19,7 @@ const IndexPage = () => {
       </Head>
 
 
-      <div className='flex flex-col'>
+      <div className='flex flex-col bg-slate-900'>
         <Navbar />
         <Header />
         <Introduction />

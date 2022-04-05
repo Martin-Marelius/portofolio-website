@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Header = () => {
     return (
-        <div className='flex flex-col max-w-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 pt-28 px md:px-44 place-items-center md:place-items-start'>
+        <div className='flex flex-col max-w-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 pt-28 px md:px-44 place-items-center md:place-items-start shadow-xl z-40'>
             <motion.div initial="hidden" animate="visible" variants={{
                 hidden: {
                     scale: 0.5,
