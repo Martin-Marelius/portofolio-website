@@ -4,14 +4,14 @@ import { dataKeywords } from "../utils/Skills";
 
 const Introduction = () => {
     return (
-        <div className='flex flex-row self-center mx-44 z-20 my-10 gap-8'>
-            <div className="flex flex-col gap-8">
-                <Information />
-                <Keywords />
-            </div>
-
-            <Skillset />
+        <div className='flex z-20 py-10 gap-8 place-content-center w-full shadow-xl'>
+                <div className="flex flex-col gap-8">
+                    <Information />
+                    <Keywords />
+                </div>
+                <Skillset />
         </div>
+
     );
 }
 
@@ -23,7 +23,7 @@ const Keywords = () => {
                     {keyword}
                 </div>
             ))}
-            </div>
+        </div>
     )
 }
 
@@ -32,7 +32,7 @@ const Information = () => {
         <div className='bg-slate-800 h-min w-min rounded-xl '>
             <div className='flex flex-row gap-6 p-2'>
                 <div className='text-slate-500 font-medium text-lg'>
-                    Introduction
+                    About
                 </div>
                 <div className='text-slate-500 font-medium'>
 

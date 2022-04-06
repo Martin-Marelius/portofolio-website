@@ -22,9 +22,9 @@ const IndexPage = () => {
       <div className='flex flex-col bg-slate-900'>
         <Navbar />
         <Header />
+        <BlogDisplay />
         <Introduction />
         <ProjectsPreview />
-        <BlogDisplay />
 
         <div className='flex bg-sky-900 pb-20 pt-10 px-40 place-content-center gap-20'>
           <ContactDisplay />
