@@ -1,12 +1,26 @@
 import Image from 'next/image';
+import { ReactElement, useEffect, useState } from 'react';
 import profileFull from '../../asset/images/profileFull.jpg'
 import profileSquare from '../../asset/images/profileSquare.jpg'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = () => {
+
+    const [messages, setMessages] = useState<ReactElement[]>([])
+
+    useEffect(() => {
+        setMessages(messages => [<p>Hey</p>, ...messages])
+    }, [])
+
+    const updateMessages = () => {
+        setTimeout(() => { (setMessages(messages => [<p>Sup</p>, ...messages]))},0)
+                    
+    }
+
+
     return (
-        <div className='flex flex-col max-w-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 pt-28 px md:px-44 place-items-center md:place-items-start shadow-xl z-40'>
+        <div className='flex flex-col max-w-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 py-28 px md:px-44 place-items-center md:place-items-start shadow-xl z-40'>
             <motion.div initial="hidden" animate="visible" variants={{
                 hidden: {
                     scale: 0.5,
@@ -20,30 +34,88 @@ const Header = () => {
                     }
                 }
             }}>
+                <button className='bg-sky-700 rounded-full' onClick={updateMessages}>
+                    click me
+                </button>
                 <div id='profileHeader' className='flex'>
-                    <ProfileCard />
-                </div>
-
-                <div className='flex mt-10'>
-                    <Information />
+                    <Chatbox>
+                        {messages}
+                    </Chatbox>
                 </div>
             </motion.div>
-            <div className='flex flex-row pt-20'>
-                <div className='bg-yellow-700 h-10 w-10'>
-
-                </div>
-                <div className='bg-sky-700 h-10 w-10'>
-
-                </div>
-                <div className='bg-red-800 h-10 w-10'>
-
-                </div>
-            </div>
         </div>
     );
 }
 
 export default Header
+
+const Chatbox = (props) => {
+    return (
+        <div className='flex flex-col w-96 bg-slate-800 rounded-t-xl rounded-b-xl'>
+            <div className='flex flex-row w-fit p-2'>
+                <h1 className='text-slate-800 font-medium '>
+                    Martin Marelius
+                </h1>
+                
+            </div>
+            <div className='flex bg-slate-900 h-96'>
+                <div className='self-end pl-4'>
+                    <Image src={profileSquare} width={44} height={44} className='rounded-full shadow-lg' />
+                    <div className='h-3 w-3 rounded-full bg-lime-600 -translate-y-4'>
+                        <div className='h-3 w-3 bg-lime-600 rounded-full transform animate-ping' />
+                    </div>
+                </div>
+                <div className='flex flex-col-reverse p-8 pl-4 gap-4 pb-14 overflow-hidden w-96'>
+                    {props.children.map((element, index) => (
+                        <>
+
+                            {index == 0 &&
+                                <div key={index} className='bg-slate-700 text-slate-400 text-sm rounded-full w-fit p-2 px-4'>
+                                    <AnimateComponent isVisible={true} index={index}>
+                                        {element}
+                                    </AnimateComponent>
+                                </div>
+                            }
+
+                            {index != 0 &&
+                                <div key={index} className='bg-slate-700 text-slate-400 text-sm rounded-full w-fit p-2 px-4'>
+                                    {element}
+                                </div>
+                            }
+
+                        </>
+                    ))}
+                </div>
+            </div>
+            <div className='flex flex-row w-max place-items-end p-2 pl-8'>
+                <h1 className='text-slate-500 font-medium '>
+                    ...
+                </h1>
+            </div>
+        </div>
+    )
+}
+
+const AnimateComponent = (props) => (
+    <AnimatePresence>
+        {props.isVisible && (
+            <motion.div
+                key={props.index}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        delay: 0.5
+                    }
+                }}>
+
+                {props.children}
+            </motion.div>
+
+        )}
+    </AnimatePresence>
+)
 
 const ProfileCard = () => {
     return (
