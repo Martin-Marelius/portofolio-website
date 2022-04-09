@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ReactElement, useEffect, useState } from 'react';
 import profileFull from '../../asset/images/profileFull.jpg'
 import profileSquare from '../../asset/images/profileSquare.jpg'
+import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -10,14 +11,25 @@ const Header = () => {
     const [messages, setMessages] = useState<ReactElement[]>([])
 
     useEffect(() => {
-        setMessages(messages => [<p>Hey</p>, ...messages])
+        if (messages.length == 0) {
+            demo();
+        }
+
     }, [])
 
-    const updateMessages = () => {
-        setTimeout(() => { (setMessages(messages => [<p>Sup</p>, ...messages]))},0)
-                    
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+    async function demo() {
+        await sleep(1000);
+        setMessages(messages => [<p>Welcome to my personal Website!</p>, ...messages])
+        await sleep(1500);
+        setMessages(messages => [<p>Feel free to take a look around :)</p>, ...messages])
+        await sleep(1500);
+        setMessages(messages => [<p>If you wish to contact me I can be reached <span className='text-sky-600'><Link href='/contact'>here</Link></span></p>, ...messages])
+
+    }
 
     return (
         <div className='flex flex-col max-w-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 py-28 px md:px-44 place-items-center md:place-items-start shadow-xl z-40'>
@@ -34,9 +46,6 @@ const Header = () => {
                     }
                 }
             }}>
-                <button className='bg-sky-700 rounded-full' onClick={updateMessages}>
-                    click me
-                </button>
                 <div id='profileHeader' className='flex'>
                     <Chatbox>
                         {messages}
@@ -56,7 +65,7 @@ const Chatbox = (props) => {
                 <h1 className='text-slate-800 font-medium '>
                     Martin Marelius
                 </h1>
-                
+
             </div>
             <div className='flex bg-slate-900 h-96'>
                 <div className='self-end pl-4'>
@@ -65,57 +74,33 @@ const Chatbox = (props) => {
                         <div className='h-3 w-3 bg-lime-600 rounded-full transform animate-ping' />
                     </div>
                 </div>
-                <div className='flex flex-col-reverse p-8 pl-4 gap-4 pb-14 overflow-hidden w-96'>
-                    {props.children.map((element, index) => (
-                        <>
 
-                            {index == 0 &&
-                                <div key={index} className='bg-slate-700 text-slate-400 text-sm rounded-full w-fit p-2 px-4'>
-                                    <AnimateComponent isVisible={true} index={index}>
-                                        {element}
-                                    </AnimateComponent>
-                                </div>
-                            }
-
-                            {index != 0 &&
-                                <div key={index} className='bg-slate-700 text-slate-400 text-sm rounded-full w-fit p-2 px-4'>
+                <ul className='flex flex-col-reverse p-8 pl-4 gap-4 pb-14 overflow-hidden w-96'>
+                    <AnimatePresence>
+                        {props.children.map((element, index) => (
+                            <motion.li
+                                key={index}
+                                initial={(index == 0) ? { opacity: 0, y: 120, scale: 1 } : {}}
+                                animate={(index == 0) ? { opacity: 1, y: 0, scale: 1 } : {}}
+                            >
+                                <div className={`bg-slate-700 text-slate-400 text-sm rounded-2xl w-fit p-2 px-4 ${(index == 0) ? 'rounded-bl-md' : ''}`}>
                                     {element}
                                 </div>
-                            }
 
-                        </>
-                    ))}
-                </div>
+                            </motion.li>
+                        ))}
+                    </AnimatePresence>
+                </ul>
+
             </div>
             <div className='flex flex-row w-max place-items-end p-2 pl-8'>
                 <h1 className='text-slate-500 font-medium '>
                     ...
                 </h1>
             </div>
-        </div>
+        </div >
     )
 }
-
-const AnimateComponent = (props) => (
-    <AnimatePresence>
-        {props.isVisible && (
-            <motion.div
-                key={props.index}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                    opacity: 1,
-                    scale: 1,
-                    transition: {
-                        delay: 0.5
-                    }
-                }}>
-
-                {props.children}
-            </motion.div>
-
-        )}
-    </AnimatePresence>
-)
 
 const ProfileCard = () => {
     return (

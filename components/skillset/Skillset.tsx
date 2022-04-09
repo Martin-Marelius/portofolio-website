@@ -37,7 +37,7 @@ const SkillCard = (props) => {
                     <ul className='text-slate-400 px-2 font-light w-50 text-right gap-2'>
                         <li>Experience:</li>
                         <li>Adaptability:</li>
-                        <li>Technicalities:</li>
+                        <li>Technical:</li>
                     </ul>
                     <div className='flex flex-col p-2 gap-3'>
                         <span className='flex flex-row gap-2 '>
